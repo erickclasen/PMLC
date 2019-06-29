@@ -20,9 +20,6 @@ for i in range(0,n):
 	# Update weight, by one step of the learning rate.
 	m = m + l
 
-	# Retest the new prediction
-        y2 = m*x
-
        # If the error is less than zero, going the wrong direction, jump back 2 learning rate units.
 	if y - y1 < 0:
 		m = m - 2*l           		

@@ -1,3 +1,4 @@
+''' Linear Proportional Solver, has all the basic elements of machine learning. '''
 # Output, input and initial m
 y = 5
 x = 2
