@@ -40,3 +40,7 @@ the concept of saving weights and biases to JSON files for future use.
 
 sixteen-digit-classifier-reader.py - A reader, that reads in the weights and biases from the JSON files. It is then fed in a value to classify and shows
 the result.
+
+
+Resources for the Vectors_Linear_Algebra dir. Provided a starting point.
+https://github.com/llSourcell/Vectors_Linear_Algebra
