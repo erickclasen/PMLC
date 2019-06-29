@@ -1,0 +1,42 @@
+simple_neural_network.py.orig gets used to play with different X and Y combos in simple_neural_network.py
+
+Simple NN to Gates, showing how XOR needs 2 layers
+
+THen it gets used to buld logic gates culminating in the series of XOR gates including ones that attempt to do it in
+one layer, show it's not possible and then with/without bias two layer and then bias on the first row of the X feature.
+Finally 4_xor_nn is supposed to show a version with a sigmoid in the hidden layer and a linear output layer, which in
+theory should work, but I have a math problem iwth it in the back prop.
+
+Solvers
+
+brute_force_solver.py - Non ML, dumb solution. Just runs m from 0 up until it finds a solution.
+
+step_ahead_jump_back_solver.py - A half step between the brute force and true ML. It steps forward by the learning
+rate and tests to see if it has moved in the right direction, if the error is < 0 then it has gone the wrong way and
+then jumps m back by 2 learning rate units.
+
+linear_proportional_solver.py - The simplest ML possible, solves a y = mx equation, learning m.
+
+newtons_method_square_root_solver.py - Demo of Newton's method to solve roots, could be thought of as a simple ML example.
+
+non_lin_solver_for_roots.py - One minor change to the linear_proportional_solver.py makes it capable of solving for a root.
+
+linear_proportional_solver_w_nonlin.py  - try to put in the sigmoid and solve, des not work, not sure why??
+
+dec_to_bin.py - http://neuralnetworksanddeeplearning.com/chap1.html
+''There is a way of determining the bitwise representation of a digit by adding an extra layer to the three-layer network above. The extra layer converts the output from the previous layer into a binary representation, as illustrated in the figure below. Find a set of weights and biases for the new output layer. Assume that the first 3 layers of neurons are such that the correct output in the third layer (i.e., the old output layer) has activation at least 0.99, and incorrect outputs have activation less than 0.01. ''
+
+
+The following classifiers in the classifier dir start to introduce to idea of showing the cost to show how they reduce as the code runs. There are 
+a few types of cost available and shown. TBD should narrow them down.
+
+four-digit-classifier.py - A classifer for 4 made up "digits" blank / and \ and full on. Can classify them to one hot output vectors, out of 16 of them.
+
+four-digit-classifier-one-layer.py - Don't actually need a hidden layer, so this is a one layer, with a test at the end throwing it bogus values.
+
+sixteen-digit-classifier-one-layer.py - Extending the classifer to cover 16 binary values from 0000 to 1111 and producing an output one hot output vector
+from 1000000000000000 to 0000000000000001. Goes in the opposite direction of dec to bin but covers all the binary values from 0-15. It also introduces
+the concept of saving weights and biases to JSON files for future use.
+
+sixteen-digit-classifier-reader.py - A reader, that reads in the weights and biases from the JSON files. It is then fed in a value to classify and shows
+the result.

@@ -1,0 +1,16 @@
+FRom:
+https://towardsdatascience.com/perceptrons-logical-functions-and-the-xor-problem-37ca5025790a
+
+
+Perceptrons, untrained, hand picked weights and biases.
+
+or_sigmoid.py - Sigmoid neurons simulating perceptrons, part II http://neuralnetworksanddeeplearning.com/chap1.html
+                worked out the consequences of the example part 1 and 2 actually with this code for the OR case.
+
+xor.py - Worked out as an example using AND,OR and NOT gates.
+
+xor-from-nand.py - Worked out as and example of just using 4 NAND gates to create a XOR gate.
+
+xnor.py - Worked out as an example using AND,OR,NOT and a NAND gates.
+
+xor-linear.py - Worked out using a third input to perceptron which is both of the original x inputs multiplied together, which can be thought of like an AND.

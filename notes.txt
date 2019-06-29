@@ -1,0 +1,2 @@
+Working on ficing up xor_nn_single_layer_with_built_in_feature_eng.py - Working now!
+All linear xors done and all the xor's in the xor folder cleaned up.

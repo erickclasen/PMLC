@@ -1,0 +1,15 @@
+Warm-up: numpy
+
+A fully-connected ReLU network with one hidden layer and no biases, trained to predict y from x using Euclidean error.
+
+This implementation uses numpy to manually compute the forward pass, loss, and backward pass.
+
+A numpy array is a generic n-dimensional array; it does not know anything about deep learning or gradients or computational graphs, and is just a way to perform generic numeric computations.
+
+
+http://pytorch.org/tutorials/beginner/examples_tensor/two_layer_net_numpy.html
+
+
+Touched the test.txt file and it does not run the loader version anymore, fails.
+
+predict-y-from-x-squareroot-bias.py - bias goes the wrong firection.

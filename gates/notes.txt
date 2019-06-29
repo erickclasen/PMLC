@@ -1,0 +1,11 @@
+All the gates done in a format where three inputs are given where the leftmost is always 1 and acts as the bias.
+The gates are basically self learning preceptrons.
+
+
+snn_hard_coded_weights_and.py - Is an example of take the weights that were learned and hardcoding them in to show it in a perceptron form.
+
+snn_xor.py - Shows how XOR cannot be solved with one layer and how it jsut gets stuck at 0.5 for all values!
+
+xor_single_layer_with_multiply_feature.py - Add a new row in the input that represents both input values multiplied together.
+
+snn_xor_linear.py - Get rid of the sigmoid and show how XOR can be solved with just one additional feature of a multiply of the x inputs.

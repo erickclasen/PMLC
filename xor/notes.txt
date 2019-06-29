@@ -1,0 +1,29 @@
+==> single_layer_xor_fails.py <==
+XOR: Normal Single layer NN cannot create a XOR gate
+
+==> xor_nn_bias_as_feature.py <==
+
+XOR: Solved with a hidden layer and the non-linear activation function on both hidden and output layers.
+Trying the bias as an input feature, still no good.
+
+==> xor_nn_linear_both_layers.py <==
+
+XOR: Solved with a hidden layer and the non-linear activation function on both hidden and output layers.
+This one shows that when there are two linear layers stacked there is no improvement over one layer.
+
+==> xor_nn_linear_output_layer.py <==
+
+XOR: Solved with a hidden layer and the non-linear activation function on both hidden and output layers.
+This one does best off all of the two layer versions for just 10000 iterations.
+
+==> xor_nn_no_bias.py <==
+
+XOR: Solved with a hidden layer and the non-linear activation function on both hidden and output layers.
+Removing the bias makes it perform fairly poorly.
+
+==> xor_nn.py <==
+
+XOR: Solved with a hidden layer and the non-linear activation function on both hidden and output layers.
+ 
+
+xor_nn_single_layer.py - Shows how it fails with just one layer. TBD needs work.
