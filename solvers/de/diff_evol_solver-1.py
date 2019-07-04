@@ -46,42 +46,47 @@ print()
 
 # Outer loop of epochs of differential evolution.
 for m in range(0,50):
-	# Iterate through population.
-	for i in range(0,pop_size):
+        # Iterate through population.
+        for i in range(0,pop_size):
 
-		# Predict with the i-th population value.
-		y1 = pop[i][0]*x 
-		
-		# Create indexes filled to the pop_size without the index that we are on.	
-		idxs = [idx for idx in range(pop_size) if idx != i]
+                # Predict with the i-th population value.
+                y1 = pop[i][0]*x 
+                
+                # Create indexes filled to the pop_size without the index that we are on.       
+                idxs = [idx for idx in range(pop_size) if idx != i]
 
-		# Randomly choose 3 indexes without replacement. 
-		selected = np.random.choice(idxs, 3, replace=False)
+                # Randomly choose 3 indexes without replacement. 
+                selected = np.random.choice(idxs, 3, replace=False)
 
-		# Pick out the three that will be used for the trial mutation from the selection.
-		a,b,c = pop[selected]
+                # Pick out the three that will be used for the trial mutation from the selection.
+                a,b,c = pop[selected]
 
-		# Generate the mutation to run a trial with.
-		mutant = mut*a+(b - c) 
-		# Make it fit into the bounds, if it is out after the operation above.
-		np.clip(mutant, bounds[0], bounds[1])
+                # Generate the mutation to run a trial with.
+                mutant = mut*a+(b - c) 
+                # Make it fit into the bounds, if it is out after the operation above.
+                np.clip(mutant, bounds[0], bounds[1])
 
-		# binomial crossover since the number of selected locations follows a binomial distribution.
-		cross_points = np.random.rand(dimensions) < crossp
-		# Create a trial version to test out.
-		trial = np.where(cross_points, mutant, pop[i]) 
-		# Trial prediction using the mutation.	
-		y2 = mutant[0] * x 
+                # binomial crossover since the number of selected locations follows a binomial distribution.
+                cross_points = np.random.rand(dimensions) < crossp
+                
+                if not np.any(cross_points):
+                        cross_points[np.random.randint(0, dimensions)] = True
 
-		# Errors of the population at the idx and the trial mutation.
-		e1 = abs(y - y1)
-		e2 = abs(y - y2)
+                # Create a trial version to test out.
+                trial = np.where(cross_points, mutant, pop[i])
 
-		# If the mutation is better, keep it and store it in the population.
-		if e1 > e2:
-			# The mutation is better. Overwrite the population at index i.
-			pop[i] = mutant
-			print(m,mutant,y1)
+                # Trial prediction using the mutation.  
+                y2 = trial[0] * x 
+
+                # Errors of the population at the idx and the trial mutation.
+                e1 = abs(y - y1)
+                e2 = abs(y - y2)
+
+                # If the mutation is better, keep it and store it in the population.
+                if e1 > e2:
+                        # The mutation is better. Overwrite the population at index i.
+                        pop[i] = trial
+                        print(m,trial,y1)
 
 # How good is it so far?
 print("Index and y1 prediction:",m,y1)

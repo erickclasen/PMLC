@@ -67,14 +67,21 @@
 │   ├── xor-from-nand.py
 │   ├── xor-linear.py
 │   └── xor.py
+├── README.md
+├── resources.txt
 ├── solvers
 │   ├── brute_force_solver.py
+│   ├── de
+│   │   ├── diffevol.py
+│   │   ├── diff_evol_solver-1.py
+│   │   ├── diff_evol_solver-2.py
+│   │   ├── diff_evol_solver-mx+b.py
+│   │   ├── diff_evol_solver.py
+│   │   ├── diff_evol_solver-x2+b.py
+│   │   ├── __pycache__
+│   │   │   └── diffevol.cpython-36.pyc
+│   │   └── test.py
 │   ├── diffevol.py
-│   ├── diff_evol_solver-1.py
-│   ├── diff_evol_solver-2.py
-│   ├── diff_evol_solver-mx+b.py
-│   ├── diff_evol_solver.py
-│   ├── diff_evol_solver-x2+b.py
 │   ├── linear_proportional_solver.py
 │   ├── linear_proportional_solver_w_nonlin.py
 │   ├── newtons_method_square_root_solver.py
@@ -84,6 +91,7 @@
 │   │   ├── split-search-seek-a-specific-value.py
 │   │   ├── split-search-seek-max.py
 │   │   └── split-search-seek-min.py
+│   ├── split-search.py
 │   └── step_ahead_jump_back_solver.py
 ├── tree.txt
 ├── Vectors_Linear_Algebra
@@ -111,4 +119,4 @@
     ├── xor_nn_single_layer.py
     └── xor_nn_single_layer_with_built_in_feature_eng.py
 
-11 directories, 100 files
+13 directories, 106 files

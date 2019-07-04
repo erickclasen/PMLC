@@ -13,12 +13,12 @@ print("i,m,y1")
 
 while l > 0.01:
 
-	y1= m*x
+        y1= m*x
 
-	if y1 <= y:
-		m += l
-	elif y1 > y:
-		l = l/2
+        if y1 <= y:
+                m += l
+        elif y1 > y:
+                l = l/2
                 m -= l
 
-	print(l,m,y1)
+        print(l,m,y1)

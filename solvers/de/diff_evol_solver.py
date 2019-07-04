@@ -42,7 +42,7 @@ print()
 
 
 # Outer loop of epochs of differential evolution.
-for m in range(0,500):
+for m in range(0,50):
 	# Iterate through population.
 	for i in range(0,pop_size):
 
